@@ -8,19 +8,19 @@ Retrieves multiple kinds of KPI of Exchange servers using Get-Counter.
 
 ## Examples
 
-# get HTTPProxy latency and send report to multiple recipients
+#get HTTPProxy latency and send report to multiple recipients
 
 ```
 .\Get-ActiveExchangeUser.ps1 -HTTPProxyAVGLatency -SendMail -From admin@contoso.com -Recipients rob@contoso.com,peter@contoso.com -SmtpServer smtp.contoso.local
 ```
 
-# get IIS memory usage for application pools using CIM
+#get IIS memory usage for application pools using CIM
 
 ```
 .\Get-ActiveExchangeUser.ps1 -IISMemoryUsage -UseCIM
 ```
 
-# get current requests for application pools, which is more reliable than using Exchange performance counters
+#get current requests for application pools, which is more reliable than using Exchange performance counters
 
 ```
 .\Get-ActiveExchangeUser.ps1 -UseASPDOTNET
