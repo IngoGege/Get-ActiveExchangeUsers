@@ -4,7 +4,7 @@ Retrieves multiple kinds of KPI of Exchange servers using Get-Counter.
 
 ### Prerequisites
 
-# must be run in the context of an administrative account of Exchange servers as it pulls the data from performance counters
+#must be run in the context of an administrative account of Exchange servers as it pulls the data from performance counters
 
 ## Examples
 
