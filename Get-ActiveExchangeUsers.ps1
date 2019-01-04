@@ -128,7 +128,7 @@ param(
         Mandatory=$false,
         Position=0)]
     [System.String[]]
-    $ADSite,
+    $ADSite = "$(([System.DirectoryServices.ActiveDirectory.ActiveDirectorySite]::GetComputerSite()).GetDirectoryEntry().Name)",
 
     [parameter(
         Mandatory=$false,
