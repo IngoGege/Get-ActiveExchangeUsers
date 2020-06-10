@@ -4,7 +4,7 @@
 
 Created by: https://ingogegenwarth.wordpress.com/
 Version:    42 ("What do you get if you multiply six by nine?")
-Changed:    08.11.2018
+Changed:    10.06.2020
 
 .DESCRIPTION
 
@@ -253,7 +253,7 @@ Function GetExchServer
 
     Process
     {
-        $valid = @("2","4","16","20","32","36","38","54","64","16385","16439")
+        $valid = @("2","4","16","20","32","36","38","54","64","16385","16439","16423")
         ForEach ($Role in $Roles)
         {
             If (-not ($valid -contains $Role))
@@ -386,11 +386,11 @@ param(
 
 If ($HTTPProxyAVGLatency -or $HTTPProxyOutstandingRequests -or $HTTPProxyRequestsPerSec -or $TimeInGC)
 {
-    [System.Array]$Servers = GetExchServer -Roles 16439,16385 -ADSites $ADSite
+    [System.Array]$Servers = GetExchServer -Roles 16439,16385,16423 -ADSites $ADSite
 }
 Else
 {
-    [System.Array]$Servers = GetExchServer -Roles 4,36,38,54,16439,16385 -ADSites $ADSite
+    [System.Array]$Servers = GetExchServer -Roles 4,36,38,54,16439,16385,16423 -ADSites $ADSite
 }
 If ($SpecifiedServers)
 {
